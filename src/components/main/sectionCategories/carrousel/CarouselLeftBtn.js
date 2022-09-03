@@ -7,12 +7,10 @@ export default function CarouselLeftBtn({ showArrow }){
   const [arrow, setArrow] = useState(false)
 
   function handleMouseEnter(event){
-    event.stopPropagation()
     setArrow(true)
   }
 
   function handleMouseLeave(event){
-    event.stopPropagation()
     setArrow(false)
   }
 
@@ -20,8 +18,8 @@ export default function CarouselLeftBtn({ showArrow }){
     <ButtonBack 
       role="button" 
       aria-label="slide backward" 
-      className={`${showArrow ? 'block' : 'hidden'} w-5 sm:w-7 lg:w-10 h-full m-0 absolute z-30 left-0 
-      lg:pl-2 sm:pl-1 pl-1 hover:bg-gray-tones-500 hover:bg-opacity-20 rounded-r
+      className={`${showArrow ? 'block' : 'hidden'} w-5 sm:w-7 lg:w-12 h-full m-0 absolute z-30 left-0 
+      lg:pl-2 sm:pl-1 pl-1 hover:bg-gray-tones-200 hover:bg-opacity-20 rounded-l
       transition ease-out duration-200`} 
       id="prev"
       onMouseEnter={handleMouseEnter}
