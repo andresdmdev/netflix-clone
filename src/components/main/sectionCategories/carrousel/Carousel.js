@@ -1,5 +1,5 @@
 import React from 'react'
-import { SliderCarousel } from './Slider';
+import { SliderCarousel } from './slider/Slider';
 import useArrowCarousel from '../../../../hooks/useArrowCarousel';
 import CarouselLarge from './CarouselLarge';
 import CarouselMedium from './CarouselMedium';
@@ -17,16 +17,14 @@ export const Carousel = React.memo(({ dataFilms }) => {
     reset 
   } = useArrowCarousel()
 
-  const handleArrow = (event) => {
-    event.stopPropagation()
+  const handleArrow = () => {
     updateRightArrow()
     if(beforeValue){
       updateLeftArrow()
     }
   }
 
-  const handleReset = (event) => {
-    event.stopPropagation()
+  const handleReset = () => {
     reset()
   }
 

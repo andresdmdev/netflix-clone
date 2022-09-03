@@ -3,7 +3,7 @@ import CarouselLoading from "./CarouselLoading";
 
 export default function CarouselWrapper({ filmsData, section }){
   return (
-    <div className="py-3 lg:pt-0 lg:pb-8 bg-opacity-0">
+    <div className="py-3 lg:pt-0 lg:pb-8 bg-opacity-0 w-full">
       {
         filmsData.length > 1 ?
         <>
