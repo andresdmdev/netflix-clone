@@ -1,4 +1,6 @@
 /** @type {import('tailwindcss').Config} */
+const plugin = require('tailwindcss/plugin')
+
 module.exports = {
   content: [
     "./src/**/*.{js,jsx,ts,tsx}",
@@ -80,7 +82,7 @@ module.exports = {
       'max': 'max-content',	
       'fit': 'fit-content',
       'imgSliderWidth': '240px',
-      'imgSliderHeight': '140px',
+      'imgSliderHeight': '133px',
       'imgSliderHeightSmall': '74px',
       'imgSliderWidthSmall': '133px',
       'imgSliderWidthMedium': '181px',
@@ -132,7 +134,38 @@ module.exports = {
         '900': '#0D0101'
       },
     },
-    extend: {},
+    extend: {
+      zIndex: {
+        '1000': '1000',
+      },
+      scale: {
+        '130': '1.30',
+        '140': '1.40',
+        '175': '1.75',
+      }
+    },
   },
-  plugins: [],
+  plugins: [
+    plugin(function({ addVariant, e }) {
+      addVariant('child(6)', ({ modifySelectors, separator }) => {
+        modifySelectors(({ className }) => {
+          return `.${e(`child(6)${separator}${className}`)}:nth-child(6n)`
+        })
+      })
+    }),
+    plugin(function({ addVariant, e }) {
+      addVariant('child(7)', ({ modifySelectors, separator }) => {
+        modifySelectors(({ className }) => {
+          return `.${e(`child(7)${separator}${className}`)}:nth-child(7)`
+        })
+      })
+    }),
+    plugin(function({ addVariant, e }) {
+      addVariant('child(13)', ({ modifySelectors, separator }) => {
+        modifySelectors(({ className }) => {
+          return `.${e(`child(13)${separator}${className}`)}:nth-child(13)`
+        })
+      })
+    })
+  ]
 }
