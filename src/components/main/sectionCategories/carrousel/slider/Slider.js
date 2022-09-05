@@ -11,8 +11,8 @@ export const SliderCarousel = React.memo(({ index, data }) => {
   return (
     <Slide 
       index={index} 
-      className={`transition ease-in-out delay-400 duration-300  
-        hover:z-1000 sm:hover:scale-125 sm:first:hover:translate-x-8 lg:hover:scale-150 lg:hover:-translate-y-10 
+      className={`transition ease-in-out delay-200 duration-300  
+        hover:z-200 sm:hover:scale-125 sm:first:hover:translate-x-8 lg:hover:scale-150 lg:hover:-translate-y-20 
         lg:first:hover:translate-x-14 lg:child(6):hover:-translate-x-10 lg:last:hover:-translate-x-20
         lg:child(7):hover:translate-x-14 lg:child(13):hover:translate-x-14`}
       onMouseEnter={handleMouseEnter}
@@ -28,7 +28,7 @@ export const SliderCarousel = React.memo(({ index, data }) => {
             }
             {
               mouseOver &&
-              <div className={`absolute -bottom-20 bg-gray-tones-450 w-full rounded-b h-20 transition ease-in-out delay-200 duration-400`}>
+              <div className={` z-300 absolute -bottom-20 bg-gray-tones-450 w-full rounded-b h-20 transition ease-in-out delay-200 duration-300`}>
               </div>
             }
         </div>
