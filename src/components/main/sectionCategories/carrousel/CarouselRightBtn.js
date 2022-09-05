@@ -1,18 +1,10 @@
-import {useState} from 'react'
 import { ButtonNext } from 'pure-react-carousel';
 import rightArrow from '../../../../images/rightArrow.svg'
+import useMouseOver from '../../../../hooks/useMouseOver';
 
 export default function CarouselRightBtn({ showArrow, handleShowArrow, handleBeforeValue }){
 
-  const [arrow, setArrow] = useState(false)
-
-  function handleMouseEnter(event){
-    setArrow(true)
-  }
-
-  function handleMouseLeave(event){
-    setArrow(false)
-  }
+  const { mouseOver, handleMouseEnter, handleMouseLeave } = useMouseOver()
   
   const handleClick = () => {
     handleShowArrow()
@@ -33,7 +25,7 @@ export default function CarouselRightBtn({ showArrow, handleShowArrow, handleBef
       <img 
         src={rightArrow}
         alt='rightArrow' 
-        className={`w-3 h-4 sm:w-4 sm:h-5 lg:w-5 lg:h-6 ${arrow ? 'scale-125' : ''}  shadow-sm transition ease-out duration-200`} 
+        className={`w-3 h-4 sm:w-4 sm:h-5 lg:w-5 lg:h-6 ${mouseOver ? 'scale-125' : ''}  shadow-sm transition ease-out duration-200`} 
       />
     </ButtonNext>
   )

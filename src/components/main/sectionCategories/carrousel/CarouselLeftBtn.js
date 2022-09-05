@@ -1,18 +1,10 @@
-import { useState } from 'react'
 import { ButtonBack } from 'pure-react-carousel';
 import leftArrow from '../../../../images/leftArrow.svg'
+import useMouseOver from '../../../../hooks/useMouseOver';
 
 export default function CarouselLeftBtn({ showArrow }){
 
-  const [arrow, setArrow] = useState(false)
-
-  function handleMouseEnter(event){
-    setArrow(true)
-  }
-
-  function handleMouseLeave(event){
-    setArrow(false)
-  }
+  const { mouseOver, handleMouseEnter, handleMouseLeave } = useMouseOver()
 
   return (
     <ButtonBack 
@@ -28,7 +20,7 @@ export default function CarouselLeftBtn({ showArrow }){
       <img 
         src={leftArrow}
         alt='leftArrow' 
-        className={`w-3 h-4 sm:w-4 sm:h-5 lg:w-5 lg:h-6 ${arrow ? 'scale-125' : ''} shadow-sm transition ease-out duration-200`} 
+        className={`w-3 h-4 sm:w-4 sm:h-5 lg:w-5 lg:h-6 ${mouseOver ? 'scale-125' : ''} shadow-sm transition ease-out duration-200`} 
       />
     </ButtonBack>
   )
