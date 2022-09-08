@@ -1,37 +1,23 @@
 import { useState, useEffect } from 'react'
 
-export default function useMainVideo(){
+export default function useTrailerVideo(){
 
   const [showVideo, setShowVideo] = useState(false)
   const [playVideo, setPlayVideo] = useState(false)
-
-
-  useEffect(() => {
-    setTimeout(() => {
-      setShowVideo(true)
-    }, 8000);
-
-    setTimeout(() => {
-      setShowVideo(false)
-    }, 24000);
-
-    return () => {
-      clearTimeout()
-    } 
-  }, [])
 
   useEffect(() => {
     
     if(playVideo){
       setShowVideo(true)
-    }
 
-    setTimeout(() => {
-      if(playVideo){
+      setTimeout(() => {
         setShowVideo(false)
         setPlayVideo(false)
-      }
-    }, 14000);
+      }, 180000);
+
+    } else {
+      setShowVideo(false)
+    }
 
     return () => {
       clearTimeout()
