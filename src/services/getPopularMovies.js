@@ -14,7 +14,7 @@ export const getPopularMovies = async ({ page = 1 }) => {
       original_title: film.original_title || film.original_name,
       overview: film.overview,
       poster_path: film.poster_path,
-      media_type: film.media_type,
+      media_type: 'movie',
       release_date: film.release_date || film.first_air_date,
       genre_ids: film.genre_ids,
       popularity: film.popularity,
