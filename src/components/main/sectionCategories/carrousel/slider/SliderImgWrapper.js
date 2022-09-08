@@ -1,6 +1,6 @@
 import { Image } from 'pure-react-carousel';
 
-export default function SliderImgWrapper({ url, active, title }){
+export default function SliderImgWrapper({ image, active, title, type, id }){
 
   const skeletonLoader = ({ error }) => (
     <div className='object-cover object-center animate-pulse lg:w-imgSliderWidth lg:h-imgSliderHeight bg-gray-tones-500 rounded'>
@@ -8,10 +8,11 @@ export default function SliderImgWrapper({ url, active, title }){
     </div>  
   )
 
+
   return (
     <>
       <Image 
-        src={`https://image.tmdb.org/t/p/w500${url}`} 
+        src={`https://image.tmdb.org/t/p/w500${image}`} 
         alt="black chair and white table" 
         className={` object-cover object-center w-full ${active ? 'rounded-t' : 'rounded'} opacity-85`}
         renderError={skeletonLoader({ error: true })}

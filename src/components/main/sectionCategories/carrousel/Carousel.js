@@ -1,5 +1,5 @@
 import React from 'react'
-import { SliderCarousel } from './slider/Slider';
+import SliderCarousel from './slider/Slider';
 import useArrowCarousel from '../../../../hooks/useArrowCarousel';
 import CarouselLarge from './CarouselLarge';
 import CarouselMedium from './CarouselMedium';
