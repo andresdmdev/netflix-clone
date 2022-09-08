@@ -1,6 +1,7 @@
 import Header from "./components/header/Header";
 import Home from "./components/main/sectionHome/Home";
 import SectionCategories from "./components/main/sectionCategories/SectionCategories";
+import { Outlet } from 'react-router-dom'
 
 function App() {
 
@@ -11,6 +12,7 @@ function App() {
         <Home />
       </div>
       <SectionCategories />
+      <Outlet />
     </div>
   );
 }
