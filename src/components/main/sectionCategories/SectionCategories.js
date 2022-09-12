@@ -1,6 +1,7 @@
+import MovieLazyLoad from "./MovieLazyLoad";
 import PopularMovies from "./PopularMovies";
-import PopularTvShows from "./PopularTvShows";
 import Trending from "./Trending";
+import TvShowLazyLoad from "./TvShowLazyLoad";
 
 export default function SectionCategories(){
   return (
@@ -8,7 +9,8 @@ export default function SectionCategories(){
     lg:pl-14 sm:pl-8 pl-4 pb-32`}>
       <Trending />
       <PopularMovies />
-      <PopularTvShows />
+      <TvShowLazyLoad />
+      <MovieLazyLoad />
     </div>
   )
 }
