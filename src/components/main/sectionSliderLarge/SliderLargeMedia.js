@@ -1,18 +1,23 @@
 import ReactPlayer from 'react-player'
+import useTrailerVideo from '../../../hooks/useTrailerVideo'
 import smallLogo from '../../../images/small-logo.svg'
 
-export default function SliderLargeMedia({ backdropImg, url, showVideo }){
+export default function SliderLargeMedia({ backdropImg, url }){
+
+  const { showTrailer } = useTrailerVideo()
+
+  const screenSize = window.innerWidth > 600 ? '-35px' : '-22px'
 
   return (
-    <div className='top-20 absolute animate-largeSlider bg-gray-tones-500 rounded-t'>
-      {
-        (url.key && showVideo) ?
-        <div className='w-56 h-32 rounded-t object-contain overflow-hidden flex justify-center items-center'>
+    <div className='mt-12 sm:mt-20 animate-largeSlider bg-red-tones-500 rounded-t relative'>
+      { 
+        (url.key && showTrailer) ?
+        <div className='w-30 h-18 sm:w-56 sm:h-32 lg:w-56 lg:h-32 rounded-t object-contain overflow-hidden flex justify-center items-center'>
           <ReactPlayer 
             playing url={`https://www.youtube.com/watch?v=${url.key}`} 
             style={{ 
-              'margin-top': '-35px',
-              'width': '350px',
+              'margin-top': screenSize,
+              'width': '100%',
               'height': '250px'
             }}
           /> 
@@ -21,12 +26,12 @@ export default function SliderLargeMedia({ backdropImg, url, showVideo }){
         <img 
           src={`https://image.tmdb.org/t/p/w500${backdropImg}`} 
           alt="backdrop" 
-          className={`w-56 h-32 rounded-t`}
+          className={`w-fit h-18 sm:w-56 sm:h-32 lg:w-56 lg:h-32 rounded-t`}
         /> 
       }
       <img 
         src={smallLogo} alt='netflixLogo' 
-        className={`w-4.5 sm:w-4 lg:w-4 absolute top-1.5 left-1`} />
+        className={`w-2.5 sm:w-4 lg:w-4 absolute left-0.75 top-1 lg:top-1.5 lg:left-1`} />
     </div>
   )
 }

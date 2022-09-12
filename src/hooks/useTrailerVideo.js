@@ -1,31 +1,34 @@
-import { useState, useEffect } from 'react'
+import { useState, useEffect, useContext } from 'react'
+import SliderLargeTrailerContext from '../context/SliderLargeTrailerContext';
 
 export default function useTrailerVideo(){
 
-  const [showVideo, setShowVideo] = useState(false)
-  const [playVideo, setPlayVideo] = useState(false)
+ /*  const [showVideo, setShowVideo] = useState(false)
+  const [playVideo, setPlayVideo] = useState(false) */
+
+  const { showTrailer, playTrailer, setShowTrailerVideo } = useContext(SliderLargeTrailerContext)
 
   useEffect(() => {
     
-    if(playVideo){
-      setShowVideo(true)
+    if(playTrailer){
+      setShowTrailerVideo(prevState => ({ ...prevState, show: true }))
 
       setTimeout(() => {
-        setShowVideo(false)
-        setPlayVideo(false)
+        setShowTrailerVideo({ show: false, play: false })
       }, 180000);
 
     } else {
-      setShowVideo(false)
+      setShowTrailerVideo(prevState => ({ ...prevState, show: false }))
     }
 
     return () => {
       clearTimeout()
     } 
-  }, [playVideo])
+  }, [playTrailer, setShowTrailerVideo])
 
   return {
-    showVideo,
-    setPlayVideo
+    showTrailer,
+    playTrailer: () => setShowTrailerVideo(prevState => ({ ...prevState, play: true })),
+    stopTrailer: () => setShowTrailerVideo(prevState => ({ ...prevState, play: false }))
   }
 }
