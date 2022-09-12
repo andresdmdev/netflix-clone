@@ -1,6 +1,22 @@
+import { useContext } from 'react'
 import { Image } from 'pure-react-carousel';
+import { useNavigate } from 'react-router-dom';
+import SliderContext from '../../../../../context/SliderContext';
+import Scroll from 'react-scroll'
 
-export default function SliderImgWrapper({ image, active, title, type, id }){
+export default function SliderImgWrapper({ active, data }){
+
+  const { setExtraData } = useContext(SliderContext)
+
+  const scroll = Scroll.animateScroll
+
+  const navigate = useNavigate()
+
+  function handleClick(){
+    setExtraData(data)
+    navigate(`/${data.id}`)
+    scroll.scrollToTop()
+  } 
 
   const skeletonLoader = ({ error }) => (
     <div className='object-cover object-center animate-pulse lg:w-imgSliderWidth lg:h-imgSliderHeight bg-gray-tones-500 rounded'>
@@ -8,11 +24,10 @@ export default function SliderImgWrapper({ image, active, title, type, id }){
     </div>  
   )
 
-
   return (
-    <>
+    <div onClick={handleClick}>
       <Image 
-        src={`https://image.tmdb.org/t/p/w500${image}`} 
+        src={`https://image.tmdb.org/t/p/w500${data.backdrop_path}`} 
         alt="black chair and white table" 
         className={` object-cover object-center w-full ${active ? 'rounded-t' : 'rounded'} opacity-85`}
         renderError={skeletonLoader({ error: true })}
@@ -22,8 +37,8 @@ export default function SliderImgWrapper({ image, active, title, type, id }){
         sm:text-s text-xs font-semibold rounded-r-sm rounded-b-sm bg-red-tones-600 px-2 py-1 lg:leading-3 
         leading-none`}
       >
-        {title}
+        {data.title}
       </h6>
-    </>
+    </div>
   )
 }
