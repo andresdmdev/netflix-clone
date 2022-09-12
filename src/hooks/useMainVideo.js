@@ -5,6 +5,7 @@ export default function useMainVideo(){
   const [showVideo, setShowVideo] = useState(false)
   const [playVideo, setPlayVideo] = useState(false)
 
+
   useEffect(() => {
     setTimeout(() => {
       setShowVideo(true)

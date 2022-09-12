@@ -19,14 +19,14 @@ export default function CarouselMedium(props){
         infinite={true}
       >
           <div 
-            className="w-full relative flex items-center justify-center" 
+            className="w-full h-full items-center justify-center flex relative" 
             onMouseEnter={props.handleArrow}
             onMouseLeave={props.handleReset}
           >
               <CarouselLeftBtn showArrow={props.left} />
-              <div className="w-full h-full mx-auto overflow-x-hidden overflow-y-hidden">
-                  <Slider>
-                      <div id="slider" className="h-full flex lg:gap-1.4 sm:gap-0.75 gap-1 items-center justify-start transition ease-in-out duration-1100">
+              <div className="w-full h-full mx-auto">
+                  <Slider style={{ 'overflowY': 'visible', 'overflowX': 'clip' }}>
+                      <div id="slider" className="w-full h-full flex lg:gap-1.4 md:gap-1.2 gap-1 items-center justify-start transition ease-in-out duration-1100">
                         {props.allData}
                       </div>
                   </Slider>
