@@ -2,10 +2,10 @@
 export default function CarouselLoading(){
 
   const slides = [1,2,3,4,5,6,7].map(elem => (
-    <div key={elem} className="flex flex-shrink-0 relative w-auto lg:auto sm:w-auto rounded">
+    <div key={elem} className="flex flex-shrink-0 relative w-auto h-auto lg:w-auto lg:h-auto sm:w-auto rounded">
       <div 
-        className={`opacity-80 animate-pulse bg-gray-tones-300 lg:w-imgSliderWidth 
-        lg:h-imgSliderHeight w-imgSliderWidthSmall h-imgSliderHeightSmall 
+        className={`opacity-80 animate-pulse bg-gray-tones-200 lg:w-imgSliderWidth 
+        lg:h-imgSliderHeight w-44 h-28 
         sm:w-imgSliderWidthMedium sm:h-imgSliderHeightMedium rounded`}
       ></div>
     </div>

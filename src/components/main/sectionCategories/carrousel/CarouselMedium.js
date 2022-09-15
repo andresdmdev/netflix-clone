@@ -9,7 +9,7 @@ export default function CarouselMedium(props){
     <>
        {/* Carousel for tablets and medium size devices */}
        <CarouselProvider 
-        className="hidden sm:block md:block lg:hidden" 
+        className="hidden sm:block md:block lg:hidden w-full h-28" 
         naturalSlideWidth={240} 
         naturalSlideHeight={140} 
         isIntrinsicHeight={true} 

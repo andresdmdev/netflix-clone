@@ -2,6 +2,7 @@ import Carousel from "./Carousel";
 import CarouselLoading from "./CarouselLoading";
 
 export default function CarouselWrapper({ filmsData, section }){
+
   return (
     <div className="py-3 lg:pt-0 lg:pb-8 bg-opacity-0 w-full">
       {

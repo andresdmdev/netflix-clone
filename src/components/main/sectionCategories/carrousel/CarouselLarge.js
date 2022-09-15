@@ -9,10 +9,10 @@ export default function CarouselLarge(props){
     <>
       {/* Carousel for desktop and large size devices */}
       <CarouselProvider 
-        className="lg:flex hidden" 
+        className="lg:flex hidden w-full h-36" 
         naturalSlideWidth={240} 
         naturalSlideHeight={140} 
-        isIntrinsicHeight={true} 
+        isIntrinsicHeight={false} 
         totalSlides={20} 
         visibleSlides={6.25} 
         step={6} 

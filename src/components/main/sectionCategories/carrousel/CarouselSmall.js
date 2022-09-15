@@ -9,7 +9,7 @@ export default function CarouselSmall(props){
     <>
       {/* Carousel for movil and small size devices */}
       <CarouselProvider 
-        className="block sm:hidden" 
+        className="block sm:hidden w-full h-24" 
         naturalSlideWidth={240} 
         naturalSlideHeight={140} 
         isIntrinsicHeight={true} 
