@@ -1,6 +1,6 @@
 import React, { useContext } from 'react'
 import Scroll from 'react-scroll'
-import { useNavigate } from 'react-router-dom'
+import { useLocation, useNavigate } from 'react-router-dom'
 import { MdKeyboardArrowDown } from "react-icons/md";
 import SliderDetailsSectionBtn from './SliderDetailsSectionBtn'
 import SliderDetailsSectionExtra from "./SliderDetailsSectionExtra";
@@ -14,10 +14,36 @@ export default function SliderDetailsSection({ data }){
   const scroll = Scroll.animateScroll
 
   const navigate = useNavigate()
+  const location = useLocation()
+
+  const helper = location.pathname.split('/')
+  const value = helper[helper.length - 1]
 
   function handleClick(){
+
     setExtraData(data)
-    navigate(`/${data.id}`)
+
+    if(location.pathname.startsWith('/movies')){
+    
+      sessionStorage.setItem('mediaType', 'movies')
+      sessionStorage.setItem('genre', value)
+  
+      navigate(`/movies/film/${data.id}`)
+  
+    } else if (location.pathname.startsWith('/tv')) {
+  
+      sessionStorage.setItem('mediaType', 'tv')
+      sessionStorage.setItem('genre', value)
+  
+      navigate(`/tv/film/${data.id}`)
+  
+    } else {
+      sessionStorage.setItem('mediaType', '/')
+      sessionStorage.setItem('genre', '/')
+  
+      navigate(`/${data.id}`)
+    }
+
     scroll.scrollToTop()
   } 
 

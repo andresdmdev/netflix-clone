@@ -17,7 +17,7 @@ export const SliderWrapper = React.memo(({ index, data }) => {
           hover:z-300 sm:hover:scale-125 sm:first:hover:translate-x-8 
           lg:hover:scale-150 lg:hover:-translate-y-20
           lg:first:hover:translate-x-14 lg:child(6):hover:-translate-x-10 lg:last:hover:-translate-x-20
-          lg:child(7):hover:translate-x-14 lg:child(13):hover:translate-x-14`}
+          lg:child(7):hover:translate-x-14 lg:child(13):hover:translate-x-14 lg:w-imgSliderWidth lg:h-imgSliderHeight`}
         onMouseEnter={handleMouseEnter}
         onMouseLeave={handleMouseLeave}
         >
