@@ -1,5 +1,5 @@
 import React, { useContext } from 'react'
-import { useNavigate } from 'react-router-dom'
+import { useLocation, useNavigate } from 'react-router-dom'
 import SliderContext from '../../../context/SliderContext'
 import useMouseOver from '../../../hooks/useMouseOver'
 import Scroll from 'react-scroll'
@@ -16,10 +16,37 @@ export const SectionCategoryFilmWrapper = React.memo(({ film }) => {
   const scroll = Scroll.animateScroll
   
   const navigate = useNavigate()
-
+  const location = useLocation()
+  
   function handleClick(){
+
     setExtraData(film)
-    navigate(`/${film.id}`)
+
+    const helper = location.pathname.split('/')
+    const value = helper[helper.length - 1]
+
+    if(location.pathname.startsWith('/movies/genre')){
+      
+      sessionStorage.setItem('mediaType', 'movies/genre')
+      sessionStorage.setItem('genre', value)
+
+      navigate(`/movies/film/${film.id}`)
+
+    } else if(location.pathname.startsWith('/tv/genre')) {
+
+      sessionStorage.setItem('mediaType', 'tv/genre')
+      sessionStorage.setItem('genre', value)
+
+      navigate(`/tv/film/${film.id}`)
+
+    } else {
+
+      sessionStorage.setItem('mediaType', 'search')
+      sessionStorage.setItem('genre', '')
+
+      navigate(`/search/film/${film.id}`)
+    }
+    
     scroll.scrollToTop()
   } 
 
@@ -44,7 +71,9 @@ export const SectionCategoryFilmWrapper = React.memo(({ film }) => {
             />
             {
               film.title.length < 20 &&
-              <img src={smallLogo} alt='netflixLogo' className='w-4.5 sm:w-4 lg:w-6 absolute top-1.5 left-1 sm:top-1.5 sm:left-1 lg:top-2 lg:left-1' />
+              <img src={smallLogo} alt='netflixLogo' className={`w-4.5 sm:w-4 lg:w-6 absolute top-1.5 
+                left-1 sm:top-1.5 sm:left-1 lg:top-2 lg:left-1`} 
+              />
             }
             {
               mouseOver &&
