@@ -6,6 +6,7 @@ import Scroll from 'react-scroll'
 import smallLogo from '../../../images/small-logo.svg'
 import SliderDetailsSection from '../sectionCategories/carrousel/slider/SliderDetailsSection'
 import SectionCategoryFilmImg from './SectionCategoryFilmImg'
+import navigationGenreHelper from '../../../helpers/navigationGenreHelper'
 
 export const SectionCategoryFilmWrapper = React.memo(({ film }) => {
 
@@ -17,35 +18,15 @@ export const SectionCategoryFilmWrapper = React.memo(({ film }) => {
   
   const navigate = useNavigate()
   const location = useLocation()
+
+  let screenImgWidth = window.innerWidth < 600 ? film.poster_path : film.backdrop_path
   
-  function handleClick(){
+  function handleClick(e){
+    e.stopPropagation()
 
     setExtraData(film)
 
-    const helper = location.pathname.split('/')
-    const value = helper[helper.length - 1]
-
-    if(location.pathname.startsWith('/movies/genre')){
-      
-      sessionStorage.setItem('mediaType', 'movies/genre')
-      sessionStorage.setItem('genre', value)
-
-      navigate(`/movies/film/${film.id}`)
-
-    } else if(location.pathname.startsWith('/tv/genre')) {
-
-      sessionStorage.setItem('mediaType', 'tv/genre')
-      sessionStorage.setItem('genre', value)
-
-      navigate(`/tv/film/${film.id}`)
-
-    } else {
-
-      sessionStorage.setItem('mediaType', 'search')
-      sessionStorage.setItem('genre', '')
-
-      navigate(`/search/film/${film.id}`)
-    }
+    navigationGenreHelper({ navigate, filmId: film.id, location })
     
     scroll.scrollToTop()
   } 
@@ -53,8 +34,8 @@ export const SectionCategoryFilmWrapper = React.memo(({ film }) => {
   return (
     <div key={film.id} className='relative flex'>
     <div 
-      className={`transition ease-in-out delay-200 duration-300
-        lg:hover:z-400 sm:hover:scale-125
+      className={`transition ease-in-out delay-200 duration-300 flex
+        hover:z-400 sm:hover:scale-125
         lg:hover:scale-125
         `}
       onMouseEnter={handleMouseEnter}
@@ -65,7 +46,7 @@ export const SectionCategoryFilmWrapper = React.memo(({ film }) => {
           >
             <SectionCategoryFilmImg 
               title={film.title} 
-              backdrop_path={film.backdrop_path} 
+              imgUrl={screenImgWidth} 
               mouseOver={mouseOver} 
               handleClick={handleClick} 
             />

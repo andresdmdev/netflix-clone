@@ -34,7 +34,7 @@ export default function SectionCategoriesFilmDetails({ mediaTypeName }){
             onClick={() => handleClick(genre.id)}
             className={classNames(
               active ? 'bg-gray-100 text-gray-900' : 'text-gray-700',
-              'block px-2 py-1 text-xs lg:text-sm hover:underline'
+              'block px-2 py-2.5 text-xs lg:text-sm hover:underline'
             )}
           >
             {genre.name}
@@ -45,7 +45,7 @@ export default function SectionCategoriesFilmDetails({ mediaTypeName }){
   ))
 
   return (
-    <div className='absolute z-300 top-10 sm:top-16 lg:top-20 left-4 sm:left-10 lg:left-14 flex gap-2 sm:gap-5 lg:gap-10 items-center'>
+    <div className='absolute z-300 top-48 sm:top-16 lg:top-20 left-4 sm:left-10 lg:left-14 flex gap-2 sm:gap-5 lg:gap-10 items-center'>
       <h1 className='text-xl sm:text-xl lg:text-4xl text-gray-tones-0 font-extrabold'>
       {
         mediaTypeName === 'movie' ? 'Movies' : 'TV Shows'

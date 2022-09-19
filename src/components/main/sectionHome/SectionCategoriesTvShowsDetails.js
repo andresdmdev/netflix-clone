@@ -45,8 +45,8 @@ export default function SectionCategoriesTvShowsDetails({ mediaTypeName }){
   ))
 
   return (
-    <div className='absolute z-300 top-10 sm:top-16 lg:top-20 left-4 sm:left-10 lg:left-14 flex gap-2 sm:gap-5 lg:gap-10 items-center'>
-      <h1 className='text-xl sm:text-xl lg:text-4xl text-gray-tones-0 font-extrabold'>
+    <div className='absolute z-300 top-48 sm:top-16 lg:top-20 left-4 sm:left-10 lg:left-14 flex gap-2 sm:gap-5 lg:gap-10 items-center'>
+      <h1 className='text-base sm:text-xl lg:text-4xl text-gray-tones-0 font-extrabold'>
       {
         mediaTypeName === 'movie' ? 'Movies' : 'TV Shows'
       }
