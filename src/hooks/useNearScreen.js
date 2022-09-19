@@ -21,7 +21,7 @@ export default function useNearScreen({ once = true } = {}){
 
     Promise.resolve(IntersectionObserver).then(() => {
 
-      observer = new IntersectionObserver(onChange, { rootMargin: '100px' })
+      observer = new IntersectionObserver(onChange, { rootMargin: '50px' })
 
       if(fromRef.current) observer.observe(fromRef.current)
     })

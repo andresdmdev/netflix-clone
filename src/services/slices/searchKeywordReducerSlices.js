@@ -41,7 +41,9 @@ const searchResults = createSlice({
         } else {
           state.error = null
 
-          state.results = action.payload.map(film => ({
+          const filterMediaType = action.payload.filter(elem => elem.media_type !== 'person').filter(elem => elem.backdrop_path !== null)
+
+          state.results = filterMediaType.map(film => ({
                             id: film.id,
                             backdrop_path: film.backdrop_path,
                             title: film.title || film.name,
