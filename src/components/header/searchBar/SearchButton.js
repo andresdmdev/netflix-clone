@@ -5,7 +5,7 @@ export default function SearchBotton({ search, handleClick }){
       <img 
         src={search}
         alt='search'
-        className="text-gray-tones-10 w-4 sm:w-6" />
+        className="text-gray-tones-10 w-5 sm:w-6" />
     </button>
   )
 }

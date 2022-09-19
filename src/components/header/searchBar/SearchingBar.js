@@ -26,7 +26,7 @@ export default function SearchingBar({ handleClick, search }){
   return (
     <div className="items-center flex bg-gray-tones-500 py-2 px-2 rounded transition-all duration-600 ease-in-out">
       <form className="flex flex-row items-center" onSubmit={handleSubmit}>
-        <button className="w-4 sm:w-6" onClick={handleSubmit}>
+        <button className="w-5 sm:w-6" onClick={handleSubmit}>
           <img 
             src={search} 
             alt='search'
@@ -38,7 +38,7 @@ export default function SearchingBar({ handleClick, search }){
           onChange={handleChange}
           value={keyword}
           className={`bg-gray-tones-500 indent-2 text-gray-tones-0 text-sm outline-none w-32 sm:w-72`}
-          placeholder='Title of the movie or serie' />
+          placeholder='Search...' />
       </form>
     </div>
   )
