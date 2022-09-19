@@ -9,9 +9,9 @@ export default function CarouselSmall(props){
     <>
       {/* Carousel for movil and small size devices */}
       <CarouselProvider 
-        className="block sm:hidden w-full h-24" 
+        className="block sm:hidden w-full" 
         naturalSlideWidth={240} 
-        naturalSlideHeight={140} 
+        naturalSlideHeight={257} 
         isIntrinsicHeight={true} 
         totalSlides={20} 
         visibleSlides={2.2} 
@@ -24,9 +24,9 @@ export default function CarouselSmall(props){
             onMouseLeave={props.handleReset}
           >
               <CarouselLeftBtn showArrow={props.left} />
-              <div className="w-full h-full mx-auto overflow-x-hidden overflow-y-hidden">
+              <div className="w-full h-64 mx-auto overflow-x-hidden overflow-y-hidden">
                   <Slider>
-                      <div id="slider" className="h-full flex lg:gap-1.4 sm:gap-0.75 gap-0.5 items-center justify-start transition ease-in-out duration-1100">
+                      <div id="slider" className="h-full flex lg:gap-1.4 sm:gap-0.75 gap-0.75 items-center justify-start transition ease-in-out duration-1100">
                         {props.allData}
                       </div>
                   </Slider>

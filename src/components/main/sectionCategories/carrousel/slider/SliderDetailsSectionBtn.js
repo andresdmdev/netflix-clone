@@ -1,5 +1,5 @@
 import { AiOutlinePlus } from "react-icons/ai";
-import { BsFillPlayFill,BsFillPauseFill } from "react-icons/bs";
+import { BsFillPlayFill } from "react-icons/bs";
 import SliderDetailsSectionBtnOptions from "./SliderDetailsSectionBtnOptions";
 
 export default function SliderDetailsSectionBtn(){
