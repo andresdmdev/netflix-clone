@@ -1,6 +1,6 @@
 import { useEffect } from 'react'
 import { useDispatch, useSelector } from "react-redux";
-import { useParams } from "react-router-dom";
+import { Outlet, useParams } from "react-router-dom";
 import Header from "../../components/header/Header";
 import SectionCategoryTitle from "../../components/main/sectionCategories/SectionCategoryTitle";
 import SectionCategoryFilmGrid from '../../components/main/sectionHome/SectionCategoryFilmGrid';
@@ -31,6 +31,7 @@ export default function CategoryTvShows(){
      <Header />
      <SectionCategoryTitle genre={genreName} mediaType='TV Shows' />
      <SectionCategoryFilmGrid data={filmsData} />
+     <Outlet />
     </>
   )
 }
