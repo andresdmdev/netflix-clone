@@ -16,7 +16,7 @@ export default function TvShowLazyLoad(){
   const { isNearScreen, fromRef } = useNearScreen()
 
   return (
-    <div ref={fromRef}>
+    <div ref={fromRef} className='flex flex-col gap-2'>
       <Suspense fallback={<CarouselLoading />}>
         {
           isNearScreen ?
