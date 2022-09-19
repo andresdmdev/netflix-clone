@@ -6,9 +6,9 @@ export function KeywordSearchValue(){
   const keywordValue = useSelector(keyword)
 
   return (
-    <div className="flex flex-row gap-4 items-center ml-14 mt-5 mb-10">
-      <h3 className=" text-xl text-gray-tones-100 font-semibold">Keyword</h3>
-      <h1 className="m-0 p-0 text-4xl text-gray-tones-0 font-extrabold capitalize">"{keywordValue}"</h1>
+    <div className="flex flex-row sm:gap-4 items-center sm:ml-14 sm:mt-5 sm:mb-10 ml-4 mt-1 mb-6 gap-2">
+      <h3 className="text-base sm:text-xl text-gray-tones-100 font-normal sm:font-semibold">Keyword</h3>
+      <h1 className="m-0 p-0 text-xl sm:text-4xl text-gray-tones-0 font-semibold sm:font-extrabold capitalize">"{keywordValue}"</h1>
     </div>
   )
 }
