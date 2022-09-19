@@ -26,14 +26,21 @@ root.render(
             <Route path='/' element={<App />}>
               <Route path=':id' element={<SliderLarge />} />
             </Route>
-            <Route path='/movies' element={<SectionCategoriesMovies />} />
-            <Route path='/movies/film/:id' element={<SliderLarge />} />
-            <Route path='/movies/genre/:id' element={<CategoryMovies />} />
-            <Route path='/tv' element={<SectionCategoriesTvShows />} />
-            <Route path='/tv/film/:id' element={<SliderLarge />} />
-            <Route path='/tv/genre/:id' element={<CategoryTvShows />} />
-            <Route path='/search/:keyword' element={<Searchresults />} />
-            <Route path='/search/film/:id' element={<SliderLarge />} />
+            <Route path='/movies' element={<SectionCategoriesMovies />}>
+              <Route path='film/:id' element={<SliderLarge />} />
+            </Route>
+            <Route path='/movies/genre/:id' element={<CategoryMovies />}>
+              <Route path='film/:filmId' element={<SliderLarge />} />
+            </Route>
+            <Route path='/tv' element={<SectionCategoriesTvShows />}>
+              <Route path='film/:id' element={<SliderLarge />} />
+            </Route>
+            <Route path='/tv/genre/:id' element={<CategoryTvShows />}>
+              <Route path='film/:filmId' element={<SliderLarge />} />
+            </Route>
+            <Route path='/search/:keyword' element={<Searchresults />}>
+              <Route path='film/:id' element={<SliderLarge />} />
+            </Route>
           </Routes>
         </HashRouter>
     </SliderContext>
