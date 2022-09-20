@@ -1,10 +1,7 @@
-import { useState, useEffect, useContext } from 'react'
+import { useEffect, useContext } from 'react'
 import SliderLargeTrailerContext from '../context/SliderLargeTrailerContext';
 
 export default function useTrailerVideo(){
-
- /*  const [showVideo, setShowVideo] = useState(false)
-  const [playVideo, setPlayVideo] = useState(false) */
 
   const { showTrailer, playTrailer, setShowTrailerVideo } = useContext(SliderLargeTrailerContext)
 

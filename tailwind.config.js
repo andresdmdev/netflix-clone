@@ -49,19 +49,22 @@ module.exports = {
       36: '9rem',	
       40: '10rem',	
       44: '11rem',	
-      48: '12rem',	
+      48: '12rem',
+      50: '12.5rem',	
       52: '13rem',	
       56: '14rem',	
       64: '16rem',	
       72: '18rem',	
       80: '20rem',	
-      96: '24rem',	
+      96: '24rem',
+      100: '30rem',
+      110: '35rem',	
       'px': '1px',	
       'auto': 'auto',	
       '1/2': '50%',	
       '1/3': '33.333333%',	
       '2/3': '66.666667%',	
-      '1/4': '25%',	
+      '1/4': '25%',
       '2/4': '50%',	
       '3/4': '75%',	
       '1/5': '20%',	
@@ -89,6 +92,7 @@ module.exports = {
       '9/12': '75%',	
       '10/12': '83.333333%',	
       '11/12': '91.666667%',
+      92: '92.5%',
       96.5: '96%',
       'full': '100%',	
       'double': '200%',
@@ -102,6 +106,10 @@ module.exports = {
       'sliderLarge': '672px',
       'imgSliderWidth': '240px',
       'imgSliderHeight': '133px',
+      'imgGridBackdropWidth': '270px',
+      'imgGridBackdropHeight': '200px',
+      'imgGridBackdropWidthSmall': '160px',
+      'imgGridBackdropHeightSmall': '110px',
       'imgSliderHeightSmall': '74px',
       'imgSliderWidthSmall': '133px',
       'imgSliderWidthMedium': '181px',
@@ -162,6 +170,8 @@ module.exports = {
       zIndex: {
         '200': '200',
         '300': '300',
+        '400': '400',
+        '500': '500'
       },
       scale: {
         '130': '1.30',
@@ -209,6 +219,13 @@ module.exports = {
     },
   },
   plugins: [
+    plugin(function({ addVariant, e }) {
+      addVariant('child(5)', ({ modifySelectors, separator }) => {
+        modifySelectors(({ className }) => {
+          return `.${e(`child(5)${separator}${className}`)}:nth-child(5n)`
+        })
+      })
+    }),
     plugin(function({ addVariant, e }) {
       addVariant('child(6)', ({ modifySelectors, separator }) => {
         modifySelectors(({ className }) => {
