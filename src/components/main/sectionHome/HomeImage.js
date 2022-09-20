@@ -4,6 +4,7 @@ export default function HomeImage({ imageHome }){
     <div className='absolute'>
       <div className='relative'>
         <img 
+          fetchpriority="high"
           src={imageHome} 
           alt='home'
           className=" bg-opacity-10"

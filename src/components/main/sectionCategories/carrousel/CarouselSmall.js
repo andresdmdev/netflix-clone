@@ -13,7 +13,7 @@ export default function CarouselSmall(props){
         naturalSlideWidth={240} 
         naturalSlideHeight={257} 
         isIntrinsicHeight={true} 
-        totalSlides={20} 
+        totalSlides={10} 
         visibleSlides={2.2} 
         step={2} 
         infinite={true}

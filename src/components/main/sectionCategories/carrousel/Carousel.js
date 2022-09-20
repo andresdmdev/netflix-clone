@@ -32,6 +32,8 @@ export const Carousel = React.memo(({ dataFilms }) => {
     <SliderCarousel index={index} data={elem} key={elem.id} />
   ))
 
+  const allDataMovil = allData.slice(0, 10)
+
   return (
     <>
       <CarouselLarge 
@@ -58,7 +60,7 @@ export const Carousel = React.memo(({ dataFilms }) => {
         handleArrow={handleArrow}
         handleReset={handleReset}
         left={left}
-        allData={allData}
+        allData={allDataMovil}
         right={right}
         updateLeftArrow={updateLeftArrow}
         updateBeforeValue ={updateBeforeValue}
