@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/netflix-clone/static/css/main.ffe802de.css",
-    "main.js": "/netflix-clone/static/js/main.a9932317.js",
+    "main.js": "/netflix-clone/static/js/main.1d708aba.js",
     "static/media/city.avif": "/netflix-clone/static/media/city.c36c78a32fcfd97541ff.avif",
     "static/media/ticket.avif": "/netflix-clone/static/media/ticket.a141ff10ccbca8542920.avif",
     "static/media/couple-beach.avif": "/netflix-clone/static/media/couple-beach.a70ea4b540ad10f46eb2.avif",
@@ -13,10 +13,10 @@
     "static/media/rightArrow.svg": "/netflix-clone/static/media/rightArrow.915a8aca7b110830808adcb313185871.svg",
     "static/media/search.svg": "/netflix-clone/static/media/search.91dcd5836fd461a36fe2fca31b219b43.svg",
     "main.ffe802de.css.map": "/netflix-clone/static/css/main.ffe802de.css.map",
-    "main.a9932317.js.map": "/netflix-clone/static/js/main.a9932317.js.map"
+    "main.1d708aba.js.map": "/netflix-clone/static/js/main.1d708aba.js.map"
   },
   "entrypoints": [
     "static/css/main.ffe802de.css",
-    "static/js/main.a9932317.js"
+    "static/js/main.1d708aba.js"
   ]
 }
