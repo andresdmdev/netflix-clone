@@ -15,7 +15,6 @@ export default function userRatingFilm({ data, ref }){
     localStorage.setItem('user-rating', userRating2)
 
   } else{
-    console.log(data)
     localStorage.setItem('user-rating', JSON.stringify([ { ...data, user_rating: ref.current.id } ]))
   }
 }
