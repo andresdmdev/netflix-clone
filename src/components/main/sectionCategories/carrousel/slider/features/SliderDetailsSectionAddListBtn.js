@@ -1,25 +1,27 @@
-import { useState } from 'react'
 import { AiOutlinePlus } from "react-icons/ai";
 import { BsCheckLg } from "react-icons/bs";
-import userFilmData from "../../../../../../helpers/userFilmData";
+import { useDispatch, useSelector } from 'react-redux';
+import { addFilmToFavorite, deleteFilmFromFavorite, favoriteListData } from '../../../../../../services/slices/favoriteListReducerSlices';
 
 export default function SliderDetailsSectionAddListBtn({ data }){
 
-  const [addFilm, setAddFilm] = useState(false) 
+  const dispatch = useDispatch()
+  const favoriteList = useSelector(favoriteListData)
 
-  const validateLocaleStorage = JSON.parse(localStorage.getItem('user-list'))
-
-  const findFilmData = validateLocaleStorage && validateLocaleStorage.find(film => film.id === data.id)
-
-  let iconBtn = <AiOutlinePlus className={`text-base text-gray-tones-10`} />
-
-  if(findFilmData && addFilm){
-    iconBtn = <BsCheckLg className={`text-xs mr-0.1 mt-0.25 text-gray-tones-10`} />
-  }
+  const findFilmData = favoriteList.find(film => film.id === data.id)
 
   function handleClickBtn(){
-    userFilmData({ data })
-    setAddFilm(prevState => !prevState) 
+
+    if(findFilmData){
+
+      dispatch(deleteFilmFromFavorite(data.id))
+
+    } else {
+
+      dispatch(addFilmToFavorite(data))
+
+    }
+
   }
 
   return (
@@ -28,7 +30,10 @@ export default function SliderDetailsSectionAddListBtn({ data }){
       className={`w-6 h-6 cursor-pointer rounded-full flex items-center justify-center bg-gray-tones-300 ring-1 
         bg-opacity-50 ring-gray-tones-50 hover:ring-gray-tones-10`}>
       {
-        iconBtn
+        findFilmData ? 
+        <BsCheckLg className={`text-xs mr-0.1 mt-0.25 text-gray-tones-10`} /> 
+        : 
+        <AiOutlinePlus className={`text-base text-gray-tones-10`} /> 
       }
     </div>
   )
