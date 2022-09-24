@@ -6,7 +6,7 @@ import Scroll from 'react-scroll'
 import smallLogo from '../../../images/small-logo.svg'
 import SliderDetailsSection from '../sectionCategories/carrousel/slider/SliderDetailsSection'
 import SectionCategoryFilmImg from './SectionCategoryFilmImg'
-import navigationGenreHelper from '../../../helpers/navigationGenreHelper'
+import navigationFilmHelper from '../../../helpers/navigationFilmHelper'
 
 export const SectionCategoryFilmWrapper = React.memo(({ film }) => {
 
@@ -26,7 +26,7 @@ export const SectionCategoryFilmWrapper = React.memo(({ film }) => {
 
     setExtraData(film)
 
-    navigationGenreHelper({ navigate, filmId: film.id, location })
+    navigationFilmHelper({ navigate, filmId: film.id, location })
     
     scroll.scrollToTop()
   } 

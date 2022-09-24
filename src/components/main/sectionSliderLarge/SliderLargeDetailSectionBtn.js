@@ -1,7 +1,8 @@
-import { AiOutlinePlus } from "react-icons/ai";
 import { BsFillPlayFill,BsFillPauseFill } from "react-icons/bs";
 import useTrailerVideo from "../../../hooks/useTrailerVideo";
+import SliderLargeDetailsSectionBtnFavorites from "./SliderLargeDetailsSectionBtnFavorites";
 import SliderLargeDetailsSectionBtnOptions from "./SliderLargeDetailsSectionBtnOptions";
+
 
 export default function SliderLargeDetailsSectionBtn(){
 
@@ -25,9 +26,7 @@ export default function SliderLargeDetailsSectionBtn(){
           <p className="text-base font-semibold">Play</p>
         </div>
       }
-      <div className={`w-8 h-8 sm:w-10 sm:h-10 cursor-pointer rounded-full flex items-center justify-center bg-gray-tones-300 ring-2 bg-opacity-50 ring-gray-tones-50 hover:ring-gray-tones-10`}>
-        <AiOutlinePlus className={`text-2xl text-gray-tones-10`} />
-      </div>
+      <SliderLargeDetailsSectionBtnFavorites />
       <SliderLargeDetailsSectionBtnOptions />
     </div>
   )
