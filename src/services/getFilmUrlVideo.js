@@ -6,7 +6,7 @@ export const getFilmUrlVideo = async ({ type, id }) => {
     const response = await API_FETCH.get(`/${type}/${id}/videos?api_key=${process.env.REACT_APP_KEY_API}&language=en-US`)
     const data = await response.data.results
 
-    return data.find(elem => elem.name === 'Official Trailer')
+    return data.find(elem => elem.name.startsWith('Official Trailer')) || data[0]
 
   } catch (error) {
     console.error(error)
