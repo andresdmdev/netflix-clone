@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/netflix-clone/static/css/main.b5d09baa.css",
-    "main.js": "/netflix-clone/static/js/main.fd1e3e12.js",
+    "main.css": "/netflix-clone/static/css/main.236ab244.css",
+    "main.js": "/netflix-clone/static/js/main.8f0787c0.js",
     "static/media/city.webp": "/netflix-clone/static/media/city.69aee221b44cff0ffc15.webp",
     "static/media/watching_movies_girls.webp": "/netflix-clone/static/media/watching_movies_girls.d9667532778b61bb7c36.webp",
     "static/media/couple-beach.webp": "/netflix-clone/static/media/couple-beach.caf74ffe09998a088cb7.webp",
@@ -12,11 +12,11 @@
     "static/media/leftArrow.svg": "/netflix-clone/static/media/leftArrow.80f2beea0ca97c17686246deb6845bff.svg",
     "static/media/rightArrow.svg": "/netflix-clone/static/media/rightArrow.4b3420b774422ba788148c469b8d59b5.svg",
     "static/media/search.svg": "/netflix-clone/static/media/search.be39a2bc3457cec682bfed3ed17960af.svg",
-    "main.b5d09baa.css.map": "/netflix-clone/static/css/main.b5d09baa.css.map",
-    "main.fd1e3e12.js.map": "/netflix-clone/static/js/main.fd1e3e12.js.map"
+    "main.236ab244.css.map": "/netflix-clone/static/css/main.236ab244.css.map",
+    "main.8f0787c0.js.map": "/netflix-clone/static/js/main.8f0787c0.js.map"
   },
   "entrypoints": [
-    "static/css/main.b5d09baa.css",
-    "static/js/main.fd1e3e12.js"
+    "static/css/main.236ab244.css",
+    "static/js/main.8f0787c0.js"
   ]
 }
