@@ -1,5 +1,5 @@
 
-export default function navigationGenreHelper({ navigate, filmId, location }){
+export default function navigationFilmHelper({ navigate, filmId, location }){
   
   const helper = location.pathname.split('/')
   const value = helper[helper.length - 1]
@@ -18,11 +18,19 @@ export default function navigationGenreHelper({ navigate, filmId, location }){
 
     return navigate(`/tv/genre/${value}/film/${filmId}`)
 
-  } else {
+  } else if(location.pathname.startsWith('/search')){
 
     sessionStorage.setItem('mediaType', 'search')
     sessionStorage.setItem('genre', '')
 
     return navigate(`/search/${value}/film/${filmId}`)
+
+  } else {
+
+    sessionStorage.setItem('mediaType', 'list')
+    sessionStorage.setItem('genre', '')
+
+    return navigate(`/list/film/${filmId}`)
+
   }
 }

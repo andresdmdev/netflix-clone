@@ -16,6 +16,7 @@ import { store } from './services/store/store'
 import SectionCategoriesTvShows from './pages/sectionCategoriesTvShows/SectionCategoriesTvShows';
 import CategoryTvShows from './pages/sectionCategoriesTvShows/CategoryTvShows';
 import Searchresults from './pages/sectionSearchResults/SearchResults';
+import SectionFavoriteFilm from './pages/sectionFavoritesFilm/SectionFavoriteFilm';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
@@ -39,6 +40,9 @@ root.render(
               <Route path='film/:filmId' element={<SliderLarge />} />
             </Route>
             <Route path='/search/:keyword' element={<Searchresults />}>
+              <Route path='film/:id' element={<SliderLarge />} />
+            </Route>
+            <Route path='/list' element={<SectionFavoriteFilm />}>
               <Route path='film/:id' element={<SliderLarge />} />
             </Route>
           </Routes>

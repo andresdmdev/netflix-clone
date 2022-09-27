@@ -18,6 +18,8 @@ export const getTrending = async ({ page = 1 }) => {
       release_date: film.release_date || film.first_air_date,
       genre_ids: film.genre_ids,
       popularity: film.popularity,
+      user_rating: '',
+      favorite: false,
     }))
 
   } catch (error) {

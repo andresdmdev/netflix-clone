@@ -47,7 +47,7 @@ export default function SliderImgWrapper({ active, data }){
       <Image 
         src={`https://image.tmdb.org/t/p/w500${screenImgWidth}`} 
         alt="black chair and white table" 
-        className={` object-cover object-center w-full ${active ? 'rounded-t' : 'rounded'} opacity-85`}
+        className={`w-1/3 ${active ? 'rounded-t' : 'rounded'} opacity-85`}
         renderError={skeletonError}
         renderLoading={skeletonLoader}
       />

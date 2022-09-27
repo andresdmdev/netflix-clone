@@ -13,7 +13,7 @@ export const SliderWrapper = React.memo(({ index, data }) => {
     <>
       <Slide 
         index={index} 
-        className={`transition ease-in-out delay-200 duration-300 
+        className={`transition ease-in-out delay-200 duration-300
           hover:z-300 sm:hover:scale-125 sm:first:hover:translate-x-8 
           lg:hover:scale-150 lg:hover:-translate-y-20
           lg:first:hover:translate-x-14 lg:child(6):hover:-translate-x-10 lg:last:hover:-translate-x-20

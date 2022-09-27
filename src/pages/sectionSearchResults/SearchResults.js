@@ -13,7 +13,11 @@ export default function Searchresults(){
     <>
       <Header />
       <KeywordSearchValue />
-      <SectionCategoryFilmGrid data={data} />
+      {
+        data.length > 0 
+        ? <SectionCategoryFilmGrid data={data} />
+        : <h3 className="text-xl text-gray-tones-10 font-semibold ml-4 sm:ml-14 my-1">Sorry, I dont found anything 😔</h3>
+      }
       <Outlet />
     </>
   )

@@ -24,6 +24,10 @@ export default function navigationSliderLargeHelper({ navigate, keywordValue }){
 
     return  navigate(`/search/${keywordValue}`)
 
+  } else if(storageMediaType === 'list') {
+
+    return  navigate(`/list`)
+
   } else {
 
     return  navigate('/')

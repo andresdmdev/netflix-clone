@@ -6,6 +6,7 @@ import SliderDetailsSectionBtn from './SliderDetailsSectionBtn'
 import SliderDetailsSectionExtra from "./SliderDetailsSectionExtra";
 import SliderDetailsSectionGenres from "./SliderDetailsSectionGenres";
 import SliderContext from '../../../../../context/SliderContext';
+import navigationSliderHelper from '../../../../../helpers/navigationSliderHelper';
 
 export default function SliderDetailsSection({ data }){
 
@@ -16,33 +17,11 @@ export default function SliderDetailsSection({ data }){
   const navigate = useNavigate()
   const location = useLocation()
 
-  const helper = location.pathname.split('/')
-  const value = helper[helper.length - 1]
-
   function handleClick(){
 
     setExtraData(data)
 
-    if(location.pathname.startsWith('/movies')){
-    
-      sessionStorage.setItem('mediaType', 'movies')
-      sessionStorage.setItem('genre', value)
-  
-      navigate(`/movies/film/${data.id}`)
-  
-    } else if (location.pathname.startsWith('/tv')) {
-  
-      sessionStorage.setItem('mediaType', 'tv')
-      sessionStorage.setItem('genre', value)
-  
-      navigate(`/tv/film/${data.id}`)
-  
-    } else {
-      sessionStorage.setItem('mediaType', '/')
-      sessionStorage.setItem('genre', '/')
-  
-      navigate(`/${data.id}`)
-    }
+    navigationSliderHelper({ navigate, location, dataId: data.id })
 
     scroll.scrollToTop()
   } 
@@ -50,7 +29,7 @@ export default function SliderDetailsSection({ data }){
   return (
     <div className={`hidden sm:block hover:z-300 absolute -bottom-20 sm:py-1.5 sm:px-2 lg:py-2 lg:px-3 bg-gray-tones-450 w-full rounded-b h-20 transition ease-in-out duration-500`}>
       <div className="flex-row flex justify-between w-full ml-1">
-        <SliderDetailsSectionBtn />
+        <SliderDetailsSectionBtn data={data} />
         <div className="mr-2 w-6 hs-6 cursor-pointer rounded-full flex items-center justify-center bg-gray-tones-300 ring-1 ring-gray-tones-50 hover:ring-gray-tones-10">
           <MdKeyboardArrowDown 
             className='text-gray-tones-10 text-xl mt-0.5'

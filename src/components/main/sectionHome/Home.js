@@ -7,7 +7,7 @@ export default function Home(){
   const randomImagenHome = randomImgHomeData()
 
   return (
-    <section className="absolute top-0 w-full h-11/12">
+    <section className="absolute top-0 w-full h-1/4 sm:w-full sm:h-11/12">
       <div className="relative w-full h-full">
         <HomeImage imageHome={randomImagenHome.image} />
         <HomePromo 

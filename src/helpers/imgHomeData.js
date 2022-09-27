@@ -1,7 +1,7 @@
-import coupleBeach from '../images/couple-beach.avif'
-import ticket from '../images/ticket.avif'
-import city from '../images/city.avif'
-import watchingMoviesGirls from '../images/watching_movies_girls.avif'
+import coupleBeach from '../images/couple-beach.webp'
+import ticket from '../images/ticket.webp'
+import city from '../images/city.webp'
+import watchingMoviesGirls from '../images/watching_movies_girls.webp'
 
 const imgHomeData = [
   {

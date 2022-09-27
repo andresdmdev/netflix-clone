@@ -111,7 +111,7 @@ module.exports = {
       'imgGridBackdropWidthSmall': '160px',
       'imgGridBackdropHeightSmall': '110px',
       'imgSliderHeightSmall': '74px',
-      'imgSliderWidthSmall': '133px',
+      'imgSliderWidthSmall': '132px',
       'imgSliderWidthMedium': '181px',
       'imgSliderHeightMedium': '101px',
       'sliderWidth': '2808px',
@@ -186,7 +186,8 @@ module.exports = {
       animation: {
         largeSlider: 'largeSlider 700ms ease-in-out forwards',
         delayShow: 'delayShow 600ms ease-in-out',
-        fade: 'fade 500ms ease-in-out forwards'
+        fade: 'fade 500ms ease-in-out forwards',
+        like: 'like 2s'
       },
       keyframes: {
         largeSlider: {
@@ -213,6 +214,16 @@ module.exports = {
             transform: 'scale(3.5)',
             height: 'scale(3.5)',
             opacity: '1'
+          }
+        },
+        like: {
+          '0%, 100%': {
+            transform: 'translateY(-15%)',
+            'animation-timing-function': 'cubic-bezier(0.8, 0, 1, 1)',
+          },
+          '50%': {
+            transform: 'translateY(0)',
+            'animation-timing-function': 'cubic-bezier(0, 0, 0.2, 1)',
           }
         }
       }

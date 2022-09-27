@@ -8,9 +8,9 @@ export default function useFilmVideo({ type, id, active }){
   useEffect(() => {
     if(active){
       getFilmUrlVideo({ type, id })
-      .then(res => {
-        setUrl({ id: res.id, key: `https://www.youtube.com/watch?v=${res.key}`, name: res.name })
-      })
+        .then(res => {
+          setUrl({ id: res.id, key: `https://www.youtube.com/watch?v=${res.key}`, name: res.name })
+        })
     }
   }, [active, id, type])
 

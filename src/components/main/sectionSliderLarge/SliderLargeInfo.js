@@ -9,7 +9,7 @@ export default function SliderLargeInfo({ extraData }){
   const { showTrailer } = useTrailerVideo()
 
   return (
-    <div className={`absolute top-16 sm:top-44 lg:top-44 left-0 animate-delayShow shadow lg:w-full`}>
+    <div className={`absolute z-500 top-10 sm:top-44 lg:top-44 left-0 animate-delayShow shadow lg:w-full`}>
       <div className='relative flex flex-col'>
         {
           !showTrailer &&
