@@ -1,22 +1,22 @@
 {
   "files": {
-    "main.css": "/netflix-clone/static/css/main.b47827b2.css",
-    "main.js": "/netflix-clone/static/js/main.02b96f84.js",
-    "static/media/city.avif": "/netflix-clone/static/media/city.c36c78a32fcfd97541ff.avif",
-    "static/media/ticket.avif": "/netflix-clone/static/media/ticket.a141ff10ccbca8542920.avif",
-    "static/media/couple-beach.avif": "/netflix-clone/static/media/couple-beach.a70ea4b540ad10f46eb2.avif",
-    "static/media/watching_movies_girls.avif": "/netflix-clone/static/media/watching_movies_girls.769e056e743469ba5a14.avif",
+    "main.css": "/netflix-clone/static/css/main.b5d09baa.css",
+    "main.js": "/netflix-clone/static/js/main.f765b238.js",
+    "static/media/city.webp": "/netflix-clone/static/media/city.69aee221b44cff0ffc15.webp",
+    "static/media/watching_movies_girls.webp": "/netflix-clone/static/media/watching_movies_girls.d9667532778b61bb7c36.webp",
+    "static/media/couple-beach.webp": "/netflix-clone/static/media/couple-beach.caf74ffe09998a088cb7.webp",
+    "static/media/ticket.webp": "/netflix-clone/static/media/ticket.578676945986f3270433.webp",
     "static/media/user.png": "/netflix-clone/static/media/user.e6efe7fff623b9de136c.png",
     "index.html": "/netflix-clone/index.html",
     "static/media/small-logo.svg": "/netflix-clone/static/media/small-logo.4190135c839db561b057fd2fa7fede88.svg",
     "static/media/leftArrow.svg": "/netflix-clone/static/media/leftArrow.80f2beea0ca97c17686246deb6845bff.svg",
     "static/media/rightArrow.svg": "/netflix-clone/static/media/rightArrow.4b3420b774422ba788148c469b8d59b5.svg",
     "static/media/search.svg": "/netflix-clone/static/media/search.be39a2bc3457cec682bfed3ed17960af.svg",
-    "main.b47827b2.css.map": "/netflix-clone/static/css/main.b47827b2.css.map",
-    "main.02b96f84.js.map": "/netflix-clone/static/js/main.02b96f84.js.map"
+    "main.b5d09baa.css.map": "/netflix-clone/static/css/main.b5d09baa.css.map",
+    "main.f765b238.js.map": "/netflix-clone/static/js/main.f765b238.js.map"
   },
   "entrypoints": [
-    "static/css/main.b47827b2.css",
-    "static/js/main.02b96f84.js"
+    "static/css/main.b5d09baa.css",
+    "static/js/main.f765b238.js"
   ]
 }
