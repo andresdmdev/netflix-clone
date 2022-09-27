@@ -31,7 +31,7 @@ export default function SliderLargeDetailsSectionBtnFavorites(){
   return (
     <div 
       onClick={handleClickBtn}
-      className={`w-8 h-8 sm:w-10 sm:h-10 cursor-pointer rounded-full flex items-center justify-center bg-gray-tones-300 ring-2 
+      className={`w-8 h-8 mr-4 sm:w-10 sm:h-10 cursor-pointer rounded-full flex items-center justify-center bg-gray-tones-300 ring-2 
         bg-opacity-50 ring-gray-tones-50 hover:ring-gray-tones-10`}>
       {
         findFilmData ? 

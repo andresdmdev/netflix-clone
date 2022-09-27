@@ -15,8 +15,6 @@ export default function SliderLarge(){
 
   const { extraData } = useContext(SliderContext)
 
-  console.log(extraData)
-
   const navigate = useNavigate()
 
   const keywordValue = useSelector(keyword)
@@ -30,14 +28,14 @@ export default function SliderLarge(){
 
   return (
     <div className='flex justify-center items-center w-full'>
-      <div onClick={handleCloseBtn} className="w-full h-full overflow-hidden bg-gray-tones-500 bg-opacity-80 brightness-80 fixed inset-0 z-400 top-0 left-0">
+      <div onClick={handleCloseBtn} className="w-full h-full overflow-hidden bg-gray-tones-500 bg-opacity-80 brightness-80 fixed inset-0 z-200 top-0 left-0">
       </div>
-      <div className="relative w-96.5 sm:w-sliderLarge lg:w-sliderLarge sm:h-11/12 lg:h-full flex justify-center z-500 mt-6 sm:mt-10 lg:mt-0">
+      <div className="relative w-96.5 sm:w-sliderLarge lg:w-sliderLarge sm:h-11/12 lg:h-full flex justify-center z-300 mt-6 sm:mt-10 lg:mt-0">
         <div
           onClick={handleCloseBtn} 
-          className={`z-500 absolute -top-3 right-4 sm:-top-8 sm:right-4 hover:ring-2 rounded-full cursor-pointer 
+          className={`z-500 absolute -top-11 right-4 sm:-top-8 sm:right-4 hover:ring-2 rounded-full cursor-pointer 
           ring-gray-tones-10 w-8 h-8 sm:w-10 sm:h-10 flex items-center justify-center bg-gray-tones-500 bg-opacity-60`}>
-          <IoMdClose className='w-6 h-6 text-gray-tones-10' />
+          <IoMdClose className='w-6 h-6 z-500 text-gray-tones-10' />
         </div>
         <SliderLargeTrailerContext>
           <SliderLargeMedia 
