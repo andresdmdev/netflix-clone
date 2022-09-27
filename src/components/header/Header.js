@@ -17,7 +17,7 @@ export default function Header(){
               <img 
                 src={logo} 
                 alt='netflix-logo'
-                className="lg:w-24 sm:w-20 w-16 h-fit" 
+                className="lg:w-24 sm:w-20 w-16 lg:h-6 sm:h-5 h-5" 
               />
             </Link>
             <HeaderMenu />
