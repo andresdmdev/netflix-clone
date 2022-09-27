@@ -111,7 +111,7 @@ module.exports = {
       'imgGridBackdropWidthSmall': '160px',
       'imgGridBackdropHeightSmall': '110px',
       'imgSliderHeightSmall': '74px',
-      'imgSliderWidthSmall': '133px',
+      'imgSliderWidthSmall': '132px',
       'imgSliderWidthMedium': '181px',
       'imgSliderHeightMedium': '101px',
       'sliderWidth': '2808px',
