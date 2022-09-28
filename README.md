@@ -1,70 +1,49 @@
-# Getting Started with Create React App
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# Netflix Clone Project - React.js
 
-## Available Scripts
+## Resume
 
-In the project directory, you can run:
+This app is a clone of Netflix website with films and trailers, I used The Movie Database. It shows movies and tv shows, ordered by categories and favorites. It has a search bar for searching movies or tv shows. Also, you can interact with the app, adding films to favorites and rating every film. I used React.js, React Redux for management state, React Router for routing the app and Tailwind for styling.
 
-### `npm start`
+## Links
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+<p align="center" width="100%">
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+  [![figma](./src/assets/readme/figma_btn.svg)](https://www.figma.com/file/7FXw8FVdQSRDUDcv4XqmRa/Frontend-design-Adidas-Project?node-id=213%3A2/)   [![web](./src/assets/readme/web_btn.svg)](https://andres-webdev.github.io/adidas-store-frontend/)
+</p>
 
-### `npm test`
+## Stack used for this project
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+| Languages  | Libraries |
+| ------ | ------ |
+| <img src="./src/assets/readme/javascript.png" alt="JavaScript" width="70px" heigth="70px" />  | <img src="./src/assets/readme/react.png" alt="React" width="70px" heigth="70px" />  |
+| <img src="./src/assets/readme/html.png" alt="Html5" width="70px" heigth="70px" />  | <img src="./src/assets/readme/redux.png" alt="Redux" width="70px" heigth="70px" />  |
+| <img src="./src/assets/readme/css.png" alt="Css" width="70px" heigth="70px" />  | <img src="./src/assets/readme/react-router.png" alt="React-Router" width="70px" heigth="70px" />  |
+| <img src="./src/assets/readme/figma.png" alt="Figma" width="70px" heigth="70px" />  | <img src="./src/assets/readme/sass.png" alt="Sass" width="70px" heigth="70px" />  |
 
-### `npm run build`
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## Screenshoots of the app
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+### Web
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+<p align="center" width="100%">
+  <img src="https://res.cloudinary.com/dp3chx1yj/image/upload/v1664322489/Netflix-Clone/web-home_w1hxi9.png" alt="home-web" />
+  
+  <img src="https://res.cloudinary.com/dp3chx1yj/image/upload/v1664322486/Netflix-Clone/web-home-carousel_rhxez9.png"           alt="home-carousel-web" />
+  
+  <img src="https://res.cloudinary.com/dp3chx1yj/image/upload/v1664322488/Netflix-Clone/web-category-grid_pukx6t.png" alt="category-grid-web" />
+  
+  <img src="https://res.cloudinary.com/dp3chx1yj/image/upload/v1664322490/Netflix-Clone/web-search-grid_p0qeiy.png" alt="search-grid-web" />
+  
+  <img src="https://res.cloudinary.com/dp3chx1yj/image/upload/v1664322487/Netflix-Clone/web-slider-large_n8rzvq.png" alt="slider-large-web" />
+</p>
 
-### `npm run eject`
+### Movil
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+<p align="center" width="100%">
+  <img src="https://res.cloudinary.com/dp3chx1yj/image/upload/v1664322482/Netflix-Clone/movil-home_ktc4mx.png"     alt="home-movil" />
+  <img src="https://res.cloudinary.com/dp3chx1yj/image/upload/v1664322848/Netflix-Clone/movil-category-grid_wemseg.png" alt="category-movil" />
+  <img src="https://res.cloudinary.com/dp3chx1yj/image/upload/v1664322847/Netflix-Clone/movil-list-grid_fevkpl.png" alt="list-movil" />
+  <img src="https://res.cloudinary.com/dp3chx1yj/image/upload/v1664323055/Netflix-Clone/movil-search-grid_bpgkp0.png" alt="search-movil" />
+  <img src="https://res.cloudinary.com/dp3chx1yj/image/upload/v1664322848/Netflix-Clone/movil-slider-large_vetss6.png" alt="slider-large-movil" />
+</p>
